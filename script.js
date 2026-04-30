@@ -19,8 +19,15 @@ function viewFromHash() {
 }
 
 links.forEach((link) => {
-  link.addEventListener("click", () => {
-    setActiveView(link.dataset.viewLink);
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    const viewName = link.dataset.viewLink;
+    const nextHash = viewName === "home" ? "#" : `#${viewName}`;
+
+    setActiveView(viewName);
+    window.history.pushState(null, "", nextHash);
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
   });
 });
 
