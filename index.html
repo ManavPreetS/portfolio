@@ -12,10 +12,15 @@
       rel="icon"
       href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231663f5'/%3E%3Ctext x='32' y='41' text-anchor='middle' font-family='Arial,sans-serif' font-size='24' font-weight='700' fill='white'%3EMS%3C/text%3E%3C/svg%3E"
     />
+    <link rel="preconnect" href="https://api.fontshare.com" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap"
+      href="https://api.fontshare.com/v2/css?f[]=general-sans@300,400,500,600,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
@@ -26,6 +31,7 @@
             <a href="#home" class="brand" data-view-link="home">Manav Preet Singh</a>
 
             <nav class="nav-tabs" aria-label="Primary navigation">
+              <span class="nav-indicator" aria-hidden="true"></span>
               <a href="#about" class="nav-link" data-view-link="about">
                 <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M20 21a8 8 0 0 0-16 0" />
@@ -89,58 +95,44 @@
 
           <div class="view-stack">
             <section class="view hero-view is-active" id="home" data-view="home" aria-labelledby="home-title">
-              <div class="hero-copy">
-                <p class="status-pill">
-                  <span class="status-dot" aria-hidden="true"></span>
-                  Available for new-grad SWE / AI roles · Graduating April 2026
-                </p>
-                <p class="eyebrow">Software Engineering Co-op · AI Systems · Automation</p>
-                <h1 id="home-title">Hi, I'm Manav Preet Singh</h1>
-                <p class="role">Software Engineer building AI-powered products and reliable data systems.</p>
-                <p class="hero-text">
-                  I turn messy workflows into usable software: ML-backed QA tooling, privacy-preserving RAG pipelines,
-                  full-stack AI career tools, and accessible web experiences.
-                </p>
-                <div class="hero-actions">
-                  <a href="#projects" class="button primary" data-view-link="projects">
-                    <svg class="button-icon" viewBox="0 0 24 24" aria-hidden="true">
-                      <rect x="3" y="3" width="5" height="5" rx="1" />
-                      <rect x="9.5" y="3" width="5" height="5" rx="1" />
-                      <rect x="16" y="3" width="5" height="5" rx="1" />
-                      <rect x="3" y="9.5" width="5" height="5" rx="1" />
-                      <rect x="9.5" y="9.5" width="5" height="5" rx="1" />
-                      <rect x="16" y="9.5" width="5" height="5" rx="1" />
-                      <rect x="3" y="16" width="5" height="5" rx="1" />
-                      <rect x="9.5" y="16" width="5" height="5" rx="1" />
-                      <rect x="16" y="16" width="5" height="5" rx="1" />
-                    </svg>
-                    View Projects
-                  </a>
-                  <a href="assets/Manav_Singh_Resume.pdf" class="button secondary" download>
-                    <svg class="button-icon" viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M12 3v12" />
-                      <path d="m7 10 5 5 5-5" />
-                      <path d="M5 21h14" />
-                    </svg>
-                    Download Resume
-                  </a>
-                </div>
-              </div>
-              <div class="hero-visual" aria-label="Highlights from Manav's work">
-                <div class="metric-panel">
-                  <span class="metric-value">100%</span>
-                  <span class="metric-label">Copilot and git activity coverage at J.D. Power</span>
-                </div>
-                <div class="metric-panel accent">
-                  <span class="metric-value">50%</span>
-                  <span class="metric-label">less manual clinical note review at Lawson</span>
-                </div>
-                <div class="code-card" aria-hidden="true">
-                  <span class="code-dot"></span>
-                  <span class="code-line wide"></span>
-                  <span class="code-line"></span>
-                  <span class="code-line short"></span>
-                </div>
+              <p class="hero-status">
+                <span class="hero-status-dot" aria-hidden="true"></span>
+                <span class="hero-status-label">Available</span>
+                <span class="hero-status-sep" aria-hidden="true"></span>
+                <span class="hero-status-meta">New-grad SWE / AI · Apr 2026</span>
+              </p>
+              <h1 id="home-title" class="hero-title">
+                <span class="hero-title-line"><span>Manav Preet</span></span>
+                <span class="hero-title-line"><span class="hero-title-mark">Singh.</span></span>
+              </h1>
+              <p class="hero-lede">
+                Software engineer building AI-powered products and reliable data systems. I turn messy
+                workflows into usable software: ML-backed QA tooling at <em>J.D. Power</em>, a
+                privacy-preserving clinical RAG pipeline at <em>Lawson</em>, and a full-stack AI career
+                platform shipping this spring.
+              </p>
+              <ul class="hero-anchors" aria-label="Selected outcomes">
+                <li>
+                  <span class="hero-anchor-num">100%</span>
+                  <span class="hero-anchor-label">Copilot &amp; git coverage at J.D. Power</span>
+                </li>
+                <li>
+                  <span class="hero-anchor-num">50%</span>
+                  <span class="hero-anchor-label">less manual clinical review at Lawson</span>
+                </li>
+                <li>
+                  <span class="hero-anchor-num">3.7</span>
+                  <span class="hero-anchor-label">GPA, Western Software Engineering</span>
+                </li>
+              </ul>
+              <div class="hero-actions">
+                <a href="#projects" class="button primary" data-view-link="projects">
+                  View projects
+                  <span class="button-arrow" aria-hidden="true">→</span>
+                </a>
+                <a href="assets/Manav_Singh_Resume.pdf" class="button secondary" download>
+                  Download resume
+                </a>
               </div>
             </section>
 
@@ -275,7 +267,7 @@
                 <article class="experience-card">
                   <div class="experience-meta">
                     <h3>J.D. Power</h3>
-                    <p>QA Automation Engineer Intern · May 2024 - Aug 2025</p>
+                    <p>QA Automation Engineer Intern · May 2024 to Aug 2025</p>
                   </div>
                   <ul class="experience-points">
                     <li>
@@ -318,7 +310,7 @@
                 <article class="experience-card">
                   <div class="experience-meta">
                     <h3>Lawson Health Research Institute</h3>
-                    <p>Data Analyst, NLP / ML · Sept 2023 - Apr 2024</p>
+                    <p>Data Analyst, NLP / ML · Sept 2023 to Apr 2024</p>
                   </div>
                   <ul class="experience-points">
                     <li>
@@ -361,10 +353,10 @@
               </div>
 
               <div class="project-detail-list">
-                <article class="project-detail-card soft-blue">
+                <article class="project-detail-card">
                   <div class="project-detail-header">
-                    <h3>LEVEL UP - AI Career Prep Platform</h3>
-                    <span>Capstone · Sept 2025 - Mar 2026</span>
+                    <h3>LEVEL UP : AI Career Prep Platform</h3>
+                    <span>Capstone · Sept 2025 to Mar 2026</span>
                   </div>
                   <ul class="project-points">
                     <li>
@@ -394,11 +386,11 @@
                   </div>
                 </article>
 
-                <article class="project-detail-card soft-yellow">
+                <article class="project-detail-card">
                   <div class="project-detail-header">
-                    <h3>Silsila - Community Mobile App</h3>
+                    <h3>Silsila : Community Mobile App</h3>
                     <div class="project-detail-side">
-                      <span>Team of 6 · 2026 - Present</span>
+                      <span>Team of 6 · 2026 to present</span>
                       <a
                         class="project-link"
                         href="https://apps.apple.com/ca/app/silsila/id6504541007"
@@ -438,7 +430,7 @@
                   </div>
                 </article>
 
-                <article class="project-detail-card soft-green">
+                <article class="project-detail-card">
                   <div class="project-detail-header">
                     <h3>Cheer OLLI Website</h3>
                     <a class="project-link" href="https://ollicheer.ca" target="_blank" rel="noreferrer">
@@ -480,20 +472,34 @@
 
             <section class="view contact-view" id="contact" data-view="contact" aria-labelledby="contact-title">
               <div class="contact-copy">
-                <h2 id="contact-title">Let's build something useful</h2>
-                <p>
-                  I am always open to software engineering roles, AI product work, and projects where automation can
-                  remove tedious manual steps from real teams.
+                <p class="contact-eyebrow">Get in touch</p>
+                <h2 id="contact-title">Let's build something useful.</h2>
+                <p class="contact-lede">
+                  Open to software engineering roles, AI product work, and projects where automation
+                  removes tedious manual steps from real teams.
                 </p>
+                <dl class="contact-channels">
+                  <div>
+                    <dt>Email</dt>
+                    <dd><a href="mailto:msing344@uwo.ca">msing344@uwo.ca</a></dd>
+                  </div>
+                  <div>
+                    <dt>Phone</dt>
+                    <dd><a href="tel:+12265053735">+1 226 505 3735</a></dd>
+                  </div>
+                  <div>
+                    <dt>Based in</dt>
+                    <dd>London, Ontario</dd>
+                  </div>
+                </dl>
                 <div class="contact-actions">
                   <a class="button primary" href="mailto:msing344@uwo.ca">
-                    <svg class="button-icon" viewBox="0 0 24 24" aria-hidden="true">
-                      <rect x="3" y="5" width="18" height="14" rx="2" />
-                      <path d="m3 7 9 6 9-6" />
-                    </svg>
-                    Get in Touch
+                    Send a message
+                    <span class="button-arrow" aria-hidden="true">→</span>
                   </a>
-                  <a class="button secondary" href="tel:+12265053735">Call Me</a>
+                  <a class="button secondary" href="assets/Manav_Singh_Resume.pdf" download>
+                    Download resume
+                  </a>
                 </div>
               </div>
             </section>
